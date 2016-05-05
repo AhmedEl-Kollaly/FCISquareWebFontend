@@ -8,7 +8,11 @@
   <head>
     
     
-    
+    <script>
+function myFunction() {
+    alert("I am an alert box!");
+}
+</script>
     
     
     
@@ -77,22 +81,22 @@ a.getAttribute("contenteditable")=="true"}var a=(new Date).getTime(),b=1e4,c=/^(
 
 
 
-<link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="../android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="57x57" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="http://i.imgur.com/SZDXWwY.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="icon" type="image/png" sizes="96x96" href="http://i.imgur.com/SZDXWwY.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://i.imgur.com/SZDXWwY.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="http://i.imgur.com/SZDXWwY.png">
 <meta name="theme-color" content="#ffffff">
 
 
@@ -151,7 +155,7 @@ data-fouc-class-names="swift-loading"
     </li>
 </ul>
         
-        <img src="./homee.gif" alt="">
+        <img src="http://i.imgur.com/9Gm35dr.gif" alt="">
 
 <div class="pull-right">
 
@@ -302,12 +306,10 @@ data-fouc-class-names="swift-loading"
           <p>Connect with your friends &#8212;   and helps you to discover new places, with recommendations from  your followers. Find a better experience, anywhere in the world..</p>
         </div>
         <div class="background-companion-tweets">
-    <div class="companion-tweet" data-photo="http://freestockimgs.com/wp-content/uploads/2015/02/tbriscj_travel_destinations-960x640.jpg">
- 
-    </div>
+  
    
 
-<div class="companion-tweet" data-photo="https://sophomorejinx.files.wordpress.com/2012/05/552907_10150940543943578_1448046393_n.jpg">
+<div class="companion-tweet" data-photo="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/12642766_574295959418685_3427075339134401448_n.jpg?oh=b8601a1a04ba973d643c8a818f57acd3&oe=57A9C423&__gda__=1470857898_fd17648a12dc20f1290eb767fa57e9cb">
  
     </div>
 
@@ -322,7 +324,7 @@ data-fouc-class-names="swift-loading"
   <form action="doLogin" class="t1-form signin" method="post">
     <div class="username field">
       <input type="text"  id="signin-email"  class="text-input email-input"  name="email"  autocomplete="username" placeholder="email "
-      />
+     required />
     </div>
 
     <table class="flex-table password-signin">
@@ -330,7 +332,7 @@ data-fouc-class-names="swift-loading"
       <tr>
         <td class="flex-table-primary">
           <div class="password flex-table-form">
-            <input type="password" id="signin-password" class="text-input flex-table-input" name="pass" placeholder="Password" autocomplete="current-password">
+            <input type="password" id="signin-password" class="text-input flex-table-input" name="pass" placeholder="Password" autocomplete="current-password" required>
           </div>
         </td>
         <td class="flex-table-secondary">
@@ -365,13 +367,13 @@ data-fouc-class-names="swift-loading"
   <form action="doSignUp" class="t1-form signup" id="frontpage-signup-form" method="post">
 
     <div class="field">
-      <input type="text" class="text-input" autocomplete="off" name="uname" maxlength="20" placeholder="User name ">
+      <input type="text" class="text-input" autocomplete="off" name="uname" maxlength="20" placeholder="User name "required>
     </div>
     <div class="field">
-      <input type="text" class="text-input email-input" autocomplete="off" name="email" placeholder="Email">
+      <input type="text" class="text-input email-input" autocomplete="off" name="email" placeholder="Email" required>
     </div>
     <div class="field">
-      <input type="password" class="text-input" name="pass" placeholder="Password">
+      <input type="password" class="text-input" name="pass" placeholder="Password" required>
     </div>
   
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">User Type
@@ -386,10 +388,10 @@ data-fouc-class-names="swift-loading"
 </button>
 
    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-    <select name="question">
+    <select name="question" required >
   
 
-
+<option value="">The security question </option>
   <option value="What is your favorite movie?">What is your favorite movie?</option>
   <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
   <option value="What is your favorite color?">What is your favorite color?</option>

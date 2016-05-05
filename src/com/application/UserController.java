@@ -3,6 +3,9 @@ package com.application;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.ws.rs.FormParam;
@@ -30,7 +33,7 @@ public class UserController {
 	@Path("/")
 	@Produces(MediaType.TEXT_HTML)
 	public Response loginPage() {
-		return Response.ok(new Viewable("/Login.jsp")).build();
+		return Response.ok(new Viewable("/home.jsp")).build();
 	}
 
 	@GET
@@ -82,7 +85,7 @@ public class UserController {
 	@Path("/doLogin")
 	@Produces(MediaType.TEXT_HTML)
 	public Response showHomePage(@FormParam("email") String email,
-			@FormParam("pass") String pass) {
+			@FormParam("pass") String pass) throws ScriptException {
 		
 		
 		
@@ -104,13 +107,42 @@ public class UserController {
 			session.setAttribute("lat", obj.get("lat"));
 			session.setAttribute("long", obj.get("long"));
 			session.setAttribute("pass", obj.get("pass"));
+			session.setAttribute("prem", obj.get("prem"));
 			Map<String, String> map = new HashMap<String, String>();
+
+			if (obj.get("id").equals("-1"))
+			{
+				
+				
+				
+			
+				
+				
+				 ScriptEngineManager factory = new ScriptEngineManager();
+				 // create a JavaScript engine
+				 ScriptEngine engine = factory.getEngineByName("JavaScript");
+				 // evaluate JavaScript code from String
+				 engine.eval(" alert('WRONG Email or Password')  ");
+				 
+				
+				
+
+			
+
+
+				
+				return Response.ok(new Viewable("/home.jsp",map)).build();
+			}
+			else 
+			{
+		
 
 			map.put("name", (String) obj.get("name"));
 			map.put("email", (String) obj.get("email"));
 
-			return Response.ok(new Viewable("/home.jsp",map)).build();
+			return Response.ok(new Viewable("/profile.jsp",map)).build();
 
+			}
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -123,12 +155,15 @@ public class UserController {
 	@Path("/doSignUp")
 	@Produces(MediaType.TEXT_HTML)
 	public Response showHomePage(@FormParam("name") String name,
-			@FormParam("email") String email, @FormParam("pass") String pass) {
+			@FormParam("email") String email, @FormParam("pass") String pass,
+			@FormParam("question") String question,
+			@FormParam("answer") String answer,
+			@FormParam("prem") String prem) {
 		//String serviceUrl = "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/signup";
 		String serviceUrl = "http://firstapp-ilocate.rhcloud.com//FCISquare/rest/signup";
 
 		String urlParameters = "name=" + name + "&email=" + email + "&pass="
-				+ pass;
+				+ pass+"&question="+question+"&answer="+answer+"&prem="+prem;
 		// System.out.println(urlParameters);
 		String retJson = Connection.connect(serviceUrl, urlParameters, "POST",
 				"application/x-www-form-urlencoded;charset=UTF-8");
@@ -143,12 +178,19 @@ public class UserController {
 			session.setAttribute("lat", obj.get("lat"));
 			session.setAttribute("long", obj.get("long"));
 			session.setAttribute("pass", obj.get("pass"));
+			session.setAttribute("following", obj.get("following"));
+			session.setAttribute("followers", obj.get("followers"));
+			session.setAttribute("numofcheckins",obj.get("numofcheckins"));
+			
 			Map<String, String> map = new HashMap<String, String>();
 
 			map.put("name", (String) obj.get("name"));
 			map.put("email", (String) obj.get("email"));
+			map.put("following", (String)obj.get("following"));
+			map.put("followers",(String) obj.get("followers"));
+			map.put("numofcheckins",(String)obj.get("numofcheckins"));
 
-			return Response.ok(new Viewable("/Login.jsp", map)).build();
+			return Response.ok(new Viewable("/profile.jsp", map)).build();
 
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
