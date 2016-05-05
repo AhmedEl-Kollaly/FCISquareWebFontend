@@ -9,5 +9,8 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="selenium/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="selenium/selenium-java-2.53.0.jar"/>
+	<classpathentry kind="lib" path="selenium/selenium-server-standalone-2.53.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
