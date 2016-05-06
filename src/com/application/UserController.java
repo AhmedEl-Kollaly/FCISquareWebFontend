@@ -222,7 +222,7 @@ public class UserController {
 	@POST
 	@Path("/doSignUp")
 	@Produces(MediaType.TEXT_HTML)
-	public Response showHomePage(@FormParam("name") String name,
+	public Response showHomePage(@FormParam("uname") String name,
 			@FormParam("email") String email, @FormParam("pass") String pass,
 			@FormParam("question") String question,
 			@FormParam("answer") String answer,
