@@ -1529,57 +1529,6 @@ data-fouc-class-names="swift-loading"
 
   
 
-  <div class="tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable
-       original-tweet js-original-tweet
-      
-       has-cards cards-forward
-"
-      
-data-tweet-id="728253676427579392"
-data-item-id="728253676427579392"
-data-permalink-path="/AlMasryAlYoum/status/728253676427579392"
-
-
-
-
-
-
-
-
-  data-screen-name="AlMasryAlYoum" data-name="?????? ?????" data-user-id="36636494"
-  data-you-follow="true"
-  data-follows-you="false"
-  data-you-block="false"
-
-
-
-
-
-
-
-
-
-data-disclosure-type=""
-
-
-
- data-card2-type="summary_large_image"
- data-has-cards="true"
-
-
-
-      <div class="modal-header">
-        <h3 class="modal-title">News feed</h3>
-      </div>
-
-      <div class="modal-body profile-modal">
-
-      </div>
-
-      <div class="loading">
-        <span class="spinner-bigger"></span>
-      </div>
-    </div>
   </div>
 </div>
 

@@ -118,18 +118,11 @@ public class UserController {
 			
 				
 				
-				 ScriptEngineManager factory = new ScriptEngineManager();
-				 // create a JavaScript engine
-				 ScriptEngine engine = factory.getEngineByName("JavaScript");
-				 // evaluate JavaScript code from String
-				 engine.eval(" alert('WRONG Email or Password')  ");
-				 
 				
 				
 
+				map.put("id", (String) obj.get("-1"));
 			
-
-
 				
 				return Response.ok(new Viewable("/home.jsp",map)).build();
 			}

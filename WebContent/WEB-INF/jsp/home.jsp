@@ -8,13 +8,15 @@
   <head>
     
     
-    <script>
-function myFunction() {
-    alert("I am an alert box!");
-}
-</script>
-    
-    
+ <script type="text/javascript">
+var Msg ='<%=session.getAttribute("id")%>';
+
+    if (Msg == "-1") {
+ function alertName(){
+ alert("your email or password is incorrect. please try again");
+ } 
+ }
+ </script> 
     
     
     <meta charset="utf-8">
