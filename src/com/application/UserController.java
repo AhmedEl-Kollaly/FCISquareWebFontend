@@ -143,6 +143,81 @@ public class UserController {
 		return null;
 
 	}
+	@POST
+	@Path("/docheckin")
+	@Produces(MediaType.TEXT_HTML)
+	public Response checkin(
+			
+			@FormParam("status") String status) throws ScriptException {
+		
+		HttpSession session = request.getSession();
+		
+		
+		//String serviceUrl = "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/login";
+		String serviceUrl = "http://firstapp-ilocate.rhcloud.com/FCISquare/rest/checkin";
+
+		String urlParameters = "id=" + session.getAttribute("id") + "&lat=" + 0+ "&long=" + 0+ "&status=" + status;
+		// System.out.println(urlParameters);
+		String retJson = Connection.connect(serviceUrl, urlParameters, "POST",
+				"application/x-www-form-urlencoded;charset=UTF-8");
+		
+		
+
+		
+/************************************************************************************************************/
+		String serviceUrl1 = "http://firstapp-ilocate.rhcloud.com/FCISquare/rest/login";
+
+		String urlParameters1 = "email=" + session.getAttribute("email") + "&pass=" + session.getAttribute("pass");
+		// System.out.println(urlParameters);
+		String retJson1 = Connection.connect(serviceUrl, urlParameters, "POST",
+				"application/x-www-form-urlencoded;charset=UTF-8");
+		HttpSession session1 = request.getSession();
+		JSONObject obj = new JSONObject();
+		JSONParser parser = new JSONParser();
+		try {
+			obj = (JSONObject) parser.parse(retJson);
+			session.setAttribute("email", obj.get("email"));
+			session.setAttribute("name", obj.get("name"));
+			session.setAttribute("id", obj.get("id"));
+			session.setAttribute("lat", obj.get("lat"));
+			session.setAttribute("long", obj.get("long"));
+			session.setAttribute("pass", obj.get("pass"));
+			session.setAttribute("prem", obj.get("prem"));
+			Map<String, String> map = new HashMap<String, String>();
+
+			if (obj.get("id").equals("-1"))
+			{
+				
+				
+				
+			
+				
+				
+				
+				
+
+				map.put("id", (String) obj.get("-1"));
+			
+				
+				return Response.ok(new Viewable("/home.jsp",map)).build();
+			}
+			else 
+			{
+		
+
+			map.put("name", (String) obj.get("name"));
+			map.put("email", (String) obj.get("email"));
+
+			return Response.ok(new Viewable("/profile.jsp",map)).build();
+
+			}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+
+	}
 
 	@POST
 	@Path("/doSignUp")

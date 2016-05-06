@@ -950,7 +950,7 @@ data-fouc-class-names="swift-loading"
       method="post"
       target="tweet-post-iframe"
         data-condensed-text="Where are you?"
-      action="//upload.twitter.com/i/tweet/create_with_media.iframe"
+      action="docheckin"
       enctype="multipart/form-data"
         data-poll-composer-rows="3"
         data-poll-duration="true"
@@ -1576,7 +1576,7 @@ data-fouc-class-names="swift-loading"
 
   <div class="field">
     <label class="t1-label" for="list-description">Description</label>
-    <textarea id="list-description" name="description"></textarea>
+    <textarea id="list-description" name="status"></textarea>
     <span class="help-text">Under 100 characters, optional</span>
   </div>
   <hr/>
