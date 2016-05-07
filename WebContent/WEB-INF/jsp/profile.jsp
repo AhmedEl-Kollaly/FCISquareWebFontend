@@ -85,7 +85,7 @@ a.getAttribute("contenteditable")=="true"}var a=(new Date).getTime(),b=1e4,c=/^(
 
 
 
-<meta name="msapplication-TileImage" content="//abs.twimg.com/favicons/win8-tile-144.png"/>
+<meta name="msapplication-TileImage" content="http://i.imgur.com/SZDXWwY.png"/>
 <meta name="msapplication-TileColor" content="#00aced"/>
 
 

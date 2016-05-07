@@ -23,6 +23,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import com.sun.jna.platform.win32.WinDef.LONG;
+
 @Path("/")
 public class UserController {
 
@@ -108,6 +110,9 @@ public class UserController {
 			session.setAttribute("long", obj.get("long"));
 			session.setAttribute("pass", obj.get("pass"));
 			session.setAttribute("prem", obj.get("prem"));
+			session.setAttribute("followers", obj.get("followers"));
+			session.setAttribute("following", obj.get("following"));
+			session.setAttribute("numofcheckins", obj.get("numofcheckins"));
 			Map<String, String> map = new HashMap<String, String>();
 
 			if (obj.get("id").equals("-1"))
@@ -132,7 +137,10 @@ public class UserController {
 
 			map.put("name", (String) obj.get("name"));
 			map.put("email", (String) obj.get("email"));
-
+			map.put("followers",(String)obj.get("followers"));
+			map.put("following", (String) obj.get("following"));
+			map.put("numofcheckins", (String) obj.get("numofcheckins"));
+			
 			return Response.ok(new Viewable("/profile.jsp",map)).build();
 
 			}
@@ -246,18 +254,18 @@ public class UserController {
 			session.setAttribute("lat", obj.get("lat"));
 			session.setAttribute("long", obj.get("long"));
 			session.setAttribute("pass", obj.get("pass"));
-			session.setAttribute("following", obj.get("following"));
+			/*session.setAttribute("following", obj.get("following"));
 			session.setAttribute("followers", obj.get("followers"));
-			session.setAttribute("numofcheckins",obj.get("numofcheckins"));
+			session.setAttribute("numofcheckins",obj.get("numofcheckins"));*/
 			
 			Map<String, String> map = new HashMap<String, String>();
 
 			map.put("name", (String) obj.get("name"));
 			map.put("email", (String) obj.get("email"));
-			map.put("following", (String)obj.get("following"));
+			/*map.put("following", (String)obj.get("following"));
 			map.put("followers",(String) obj.get("followers"));
 			map.put("numofcheckins",(String)obj.get("numofcheckins"));
-
+*/
 			return Response.ok(new Viewable("/profile.jsp", map)).build();
 
 		} catch (ParseException e) {
