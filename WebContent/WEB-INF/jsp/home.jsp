@@ -145,7 +145,7 @@ data-fouc-class-names="swift-loading"
       <div class="container">
 <ul class="nav js-global-actions" role="navigation" id="global-actions">
   <li id="global-nav-home" class="home" data-global-action="home">
-    <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="/" data-component-context="home_nav" data-nav="home">
+    <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="./" data-component-context="home_nav" data-nav="home">
       <span class=""></span>
       <span class="text">Home</span>
     </a>
