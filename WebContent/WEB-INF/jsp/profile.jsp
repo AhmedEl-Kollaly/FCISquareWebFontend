@@ -641,7 +641,7 @@ data-fouc-class-names="swift-loading"
 
   
   <div role="navigation" style="display: inline-block;"><ul class="nav js-global-actions" id="global-actions"><li id="global-nav-home" class="home active" data-global-action="home">
-        <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="/" data-component-context="home_nav" data-nav="home">
+        <a class="js-nav js-tooltip js-dynamic-tooltip" data-placement="bottom" href="#" data-component-context="home_nav" data-nav="home">
           <span class="Icon Icon--home Icon--large"></span>
           <span class="text">Home</span>
         </a>
