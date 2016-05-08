@@ -262,10 +262,10 @@ public class UserController {
 
 			map.put("name", (String) obj.get("name"));
 			map.put("email", (String) obj.get("email"));
-			/*map.put("following", (String)obj.get("following"));
-			map.put("followers",(String) obj.get("followers"));
-			map.put("numofcheckins",(String)obj.get("numofcheckins"));
-*/
+			map.put("following", "0");
+			map.put("followers","0");
+			map.put("numofcheckins","0");
+
 			return Response.ok(new Viewable("/profile.jsp", map)).build();
 
 		} catch (ParseException e) {
