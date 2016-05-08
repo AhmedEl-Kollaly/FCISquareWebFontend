@@ -89,9 +89,6 @@ a.getAttribute("contenteditable")=="true"}var a=(new Date).getTime(),b=1e4,c=/^(
 <meta name="msapplication-TileColor" content="#00aced"/>
 
 
-<link rel="mask-icon" sizes="any" href="https://abs.twimg.com/a/1462335525/img/t1/favicon.svg" color="#55acee">
-
-  <link href="//abs.twimg.com/favicons/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 <link rel="manifest" href="/manifest.json">
 
