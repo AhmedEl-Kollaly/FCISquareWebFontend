@@ -775,7 +775,7 @@ data-fouc-class-names="swift-loading"
       <li><a href="/settings/account" data-nav="settings" class="js-nav">Settings</a></li>
 
       
-      <li><a href="./home.jsp" data-nav="settings" class="js-nav">Log out</a></li>
+      <li><a href="http://fcisquare-ilocate.rhcloud.com/FCISquareAppFrontend/app/" data-nav="settings" class="js-nav">Log out</a></li>
 
       
         <form class="t1-form dropdown-link-form signout-form" id="signout-form" action="/logout" method="POST">
