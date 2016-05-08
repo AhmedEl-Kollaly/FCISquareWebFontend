@@ -238,7 +238,7 @@ public class UserController {
 		//String serviceUrl = "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/signup";
 		String serviceUrl = "http://firstapp-ilocate.rhcloud.com//FCISquare/rest/signup";
 
-		String urlParameters = "name=" + name + "&email=" + email + "&pass="
+		String urlParameters = "uname=" + name + "&email=" + email + "&pass="
 				+ pass+"&question="+question+"&answer="+answer+"&prem="+prem;
 		// System.out.println(urlParameters);
 		String retJson = Connection.connect(serviceUrl, urlParameters, "POST",
